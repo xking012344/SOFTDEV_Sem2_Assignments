@@ -5,6 +5,7 @@ public class App {
         try (Scanner input = new Scanner(System.in)) {
 
             System.out.println("Enter a number:");
+            System.out.println("Enter a number");
             String number1 = input.next();
             System.out.println("Enter another number");
             String number2 = input.next();
@@ -24,6 +25,8 @@ public class App {
                     number2Int = 0;
                     throw new IntegerException("number2 is not an int");
                 }
+
+
             } catch (IntegerException intEX) {
                 System.out.println(intEX.getMessage());
             }
