@@ -34,12 +34,11 @@ public class App {
                 return Math.sqrt(aSq + bSq - cosinePart);
             };
 
-    // TODO: write a function called lawOfCosinesAngle
     public static Function<Double, Function<Double, Function<Double, Double>>> lawOfCosinesAngleC = (
             a) -> (b) -> (c) -> {
 
-                //angleC = acos((c^2 - a^2 - b^2) / (-2ab))
-
+                double angleC = Math.acos((Math.pow(c, 2) - Math.pow(a, 2) - Math.pow(b, 2)) / (-2 * a * b));
+                return angleC;
             };
 
-}
+};
